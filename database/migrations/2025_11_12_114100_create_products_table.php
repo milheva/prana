@@ -22,7 +22,7 @@ return new class extends Migration
             $table->decimal('discount_price', 12, 2)->nullable();
             $table->integer('stock')->default(0);
             $table->string('unit')->default('pcs'); // pcs, box, botol, dll
-            $table->json('images')->nullable(); // multiple images
+            $table->string('image')->nullable(); // product image URL
             $table->boolean('is_active')->default(true);
             $table->boolean('is_featured')->default(false);
             $table->string('brand')->nullable();

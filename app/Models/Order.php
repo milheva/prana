@@ -23,6 +23,7 @@ class Order extends Model
         'payment_status',
         'paid_at',
         'notes',
+        'cancelled_at',
     ];
 
     protected $casts = [
@@ -30,6 +31,7 @@ class Order extends Model
         'shipping_cost' => 'decimal:2',
         'total' => 'decimal:2',
         'paid_at' => 'datetime',
+        'cancelled_at' => 'datetime',
     ];
 
     /**

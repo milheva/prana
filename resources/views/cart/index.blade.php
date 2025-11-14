@@ -53,13 +53,20 @@
                                     <div class="flex flex-col md:flex-row gap-4">
                                         <!-- Product Image -->
                                         <a href="{{ route('products.show', $cart->product->slug) }}"
-                                            class="avatar placeholder flex-shrink-0">
-                                            <div
-                                                class="bg-gradient-to-br from-primary/20 to-secondary/20 text-primary w-full md:w-32 h-32 rounded-2xl ring ring-primary/10 ring-offset-2 hover:ring-primary/30 transition-all">
-                                                <span class="text-3xl font-bold">
-                                                    {{ strtoupper(substr($cart->product->name, 0, 2)) }}
-                                                </span>
-                                            </div>
+                                            class="flex-shrink-0">
+                                            @if ($cart->product->image)
+                                                <img src="{{ $cart->product->image }}" alt="{{ $cart->product->name }}"
+                                                    class="w-full md:w-32 h-32 object-cover rounded-2xl ring ring-primary/10 ring-offset-2 hover:ring-primary/30 transition-all">
+                                            @else
+                                                <div class="avatar placeholder">
+                                                    <div
+                                                        class="bg-gradient-to-br from-primary/20 to-secondary/20 text-primary w-full md:w-32 h-32 rounded-2xl ring ring-primary/10 ring-offset-2 hover:ring-primary/30 transition-all">
+                                                        <span class="text-3xl font-bold">
+                                                            {{ strtoupper(substr($cart->product->name, 0, 2)) }}
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            @endif
                                         </a>
 
                                         <!-- Product Info -->

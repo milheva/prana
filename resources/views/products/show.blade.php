@@ -49,14 +49,19 @@
                                     {{ round((($product->price - $product->discount_price) / $product->price) * 100) }}%
                                 </div>
                             @endif
-                            <div class="avatar placeholder w-full p-8">
-                                <div
-                                    class="bg-gradient-to-br from-primary/20 to-secondary/20 text-primary w-full aspect-square rounded-3xl ring ring-primary/20 ring-offset-4 group-hover:ring-primary/40 transition-all duration-300">
-                                    <span class="text-8xl font-bold">
-                                        {{ strtoupper(substr($product->name, 0, 2)) }}
-                                    </span>
+                            @if ($product->image)
+                                <img src="{{ $product->image }}" alt="{{ $product->name }}"
+                                    class="w-full aspect-square object-cover p-8 rounded-3xl ring ring-primary/20 ring-offset-4 group-hover:ring-primary/40 transition-all duration-300">
+                            @else
+                                <div class="avatar placeholder w-full p-8">
+                                    <div
+                                        class="bg-gradient-to-br from-primary/20 to-secondary/20 text-primary w-full aspect-square rounded-3xl ring ring-primary/20 ring-offset-4 group-hover:ring-primary/40 transition-all duration-300">
+                                        <span class="text-8xl font-bold">
+                                            {{ strtoupper(substr($product->name, 0, 2)) }}
+                                        </span>
+                                    </div>
                                 </div>
-                            </div>
+                            @endif
                         </figure>
                     </div>
 
@@ -123,7 +128,8 @@
                                 <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
                                 <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
                                 <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
-                                <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400"
+                                    checked />
                                 <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" />
                             </div>
                             <span class="text-sm text-base-content/70">4.5 (128 ulasan)</span>
@@ -398,14 +404,20 @@
                                 @if ($relatedProduct->isOnSale())
                                     <div class="absolute top-4 left-4 z-10 badge badge-error badge-sm">SALE</div>
                                 @endif
-                                <a href="{{ route('products.show', $relatedProduct->slug) }}"
-                                    class="avatar placeholder w-full">
-                                    <div
-                                        class="bg-gradient-to-br from-primary/20 to-secondary/20 text-primary w-full aspect-square rounded-xl hover:ring-2 hover:ring-primary/30 transition-all">
-                                        <span class="text-3xl font-bold">
-                                            {{ strtoupper(substr($relatedProduct->name, 0, 2)) }}
-                                        </span>
-                                    </div>
+                                <a href="{{ route('products.show', $relatedProduct->slug) }}" class="w-full block">
+                                    @if ($relatedProduct->image)
+                                        <img src="{{ $relatedProduct->image }}" alt="{{ $relatedProduct->name }}"
+                                            class="w-full aspect-square object-cover rounded-xl hover:ring-2 hover:ring-primary/30 transition-all">
+                                    @else
+                                        <div class="avatar placeholder w-full">
+                                            <div
+                                                class="bg-gradient-to-br from-primary/20 to-secondary/20 text-primary w-full aspect-square rounded-xl hover:ring-2 hover:ring-primary/30 transition-all">
+                                                <span class="text-3xl font-bold">
+                                                    {{ strtoupper(substr($relatedProduct->name, 0, 2)) }}
+                                                </span>
+                                            </div>
+                                        </div>
+                                    @endif
                                 </a>
                             </figure>
                             <div class="card-body p-4">

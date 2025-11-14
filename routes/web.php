@@ -6,6 +6,8 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\InvoiceController;
 use Illuminate\Support\Facades\Route;
 
 // Public routes - Visitor & Customer
@@ -27,9 +29,7 @@ Route::delete('/cart', [CartController::class, 'clear'])->name('cart.clear');
 // Protected routes - Harus login (Customer only)
 Route::middleware(['auth', 'verified'])->group(function () {
     // Dashboard untuk customer yang sudah login
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     // Profile
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -44,6 +44,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
     Route::get('/orders/{order}', [OrderController::class, 'show'])->name('orders.show');
     Route::post('/orders/{order}/cancel', [OrderController::class, 'cancel'])->name('orders.cancel');
+
+    // Invoice routes - Harus login dan owner/admin
+    Route::get('/orders/{order}/invoice', [InvoiceController::class, 'show'])->name('invoice.show');
+    Route::get('/orders/{order}/invoice/pdf', [InvoiceController::class, 'downloadPdf'])->name('invoice.download.pdf');
+    Route::get('/orders/{order}/invoice/jpg', [InvoiceController::class, 'downloadJpg'])->name('invoice.download.jpg');
+    Route::post('/orders/{order}/invoice/email', [InvoiceController::class, 'sendEmail'])->name('invoice.send-email');
 });
 
 require __DIR__ . '/auth.php';

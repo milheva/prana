@@ -133,13 +133,18 @@
                                     SALE!
                                 </div>
                             @endif
-                            <div class="avatar placeholder">
-                                <div
-                                    class="bg-gradient-to-br from-neutral to-base-300 text-neutral-content w-full aspect-square rounded-xl">
-                                    <span
-                                        class="text-4xl font-bold">{{ strtoupper(substr($product->name, 0, 2)) }}</span>
+                            @if ($product->image)
+                                <img src="{{ $product->image }}" alt="{{ $product->name }}"
+                                    class="w-full aspect-square object-cover rounded-xl">
+                            @else
+                                <div class="avatar placeholder">
+                                    <div
+                                        class="bg-gradient-to-br from-neutral to-base-300 text-neutral-content w-full aspect-square rounded-xl">
+                                        <span
+                                            class="text-4xl font-bold">{{ strtoupper(substr($product->name, 0, 2)) }}</span>
+                                    </div>
                                 </div>
-                            </div>
+                            @endif
                         </figure>
                         <div class="card-body">
                             <div class="badge badge-primary badge-sm">{{ $product->category->name }}</div>

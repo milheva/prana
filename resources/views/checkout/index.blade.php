@@ -57,18 +57,12 @@
                                 <span>Informasi Pengiriman</span>
                             </h2>
 
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="space-y-6">
                                 <!-- Full Name -->
-                                <div class="form-control md:col-span-2">
-                                    <label class="label">
-                                        <span class="label-text font-semibold flex items-center gap-2">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
-                                                viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                            </svg>
-                                            Nama Penerima
-                                            <span class="text-error">*</span>
+                                <div class="form-control">
+                                    <label class="label pb-2">
+                                        <span class="label-text font-semibold">
+                                            Nama Penerima <span class="text-error">*</span>
                                         </span>
                                     </label>
                                     <input type="text" name="shipping_name"
@@ -76,7 +70,7 @@
                                         class="input input-bordered input-lg @error('shipping_name') input-error @enderror"
                                         placeholder="Masukkan nama lengkap penerima" required />
                                     @error('shipping_name')
-                                        <label class="label">
+                                        <label class="label pt-1">
                                             <span class="label-text-alt text-error">{{ $message }}</span>
                                         </label>
                                     @enderror
@@ -84,15 +78,9 @@
 
                                 <!-- Phone Number -->
                                 <div class="form-control">
-                                    <label class="label">
-                                        <span class="label-text font-semibold flex items-center gap-2">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
-                                                viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                            </svg>
-                                            No. Telepon
-                                            <span class="text-error">*</span>
+                                    <label class="label pb-2">
+                                        <span class="label-text font-semibold">
+                                            No. Telepon <span class="text-error">*</span>
                                         </span>
                                     </label>
                                     <input type="tel" name="shipping_phone"
@@ -100,7 +88,7 @@
                                         class="input input-bordered input-lg @error('shipping_phone') input-error @enderror"
                                         placeholder="08xxxxxxxxxx" required />
                                     @error('shipping_phone')
-                                        <label class="label">
+                                        <label class="label pt-1">
                                             <span class="label-text-alt text-error">{{ $message }}</span>
                                         </label>
                                     @enderror
@@ -108,13 +96,8 @@
 
                                 <!-- Email -->
                                 <div class="form-control">
-                                    <label class="label">
-                                        <span class="label-text font-semibold flex items-center gap-2">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
-                                                viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
-                                            </svg>
+                                    <label class="label pb-2">
+                                        <span class="label-text font-semibold">
                                             Email
                                         </span>
                                     </label>
@@ -124,25 +107,17 @@
                                 </div>
 
                                 <!-- Full Address -->
-                                <div class="form-control md:col-span-2">
-                                    <label class="label">
-                                        <span class="label-text font-semibold flex items-center gap-2">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
-                                                viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                            </svg>
-                                            Alamat Lengkap
-                                            <span class="text-error">*</span>
+                                <div class="form-control">
+                                    <label class="label pb-2">
+                                        <span class="label-text font-semibold">
+                                            Alamat Lengkap <span class="text-error">*</span>
                                         </span>
                                     </label>
                                     <textarea name="shipping_address" rows="3"
                                         class="textarea textarea-bordered textarea-lg @error('shipping_address') textarea-error @enderror"
                                         placeholder="Jl. Contoh No. 123, RT/RW, Kelurahan, Kecamatan" required>{{ old('shipping_address', auth()->user()->address) }}</textarea>
                                     @error('shipping_address')
-                                        <label class="label">
+                                        <label class="label pt-1">
                                             <span class="label-text-alt text-error">{{ $message }}</span>
                                         </label>
                                     @enderror
@@ -150,10 +125,9 @@
 
                                 <!-- City -->
                                 <div class="form-control">
-                                    <label class="label">
+                                    <label class="label pb-2">
                                         <span class="label-text font-semibold">
-                                            Kota
-                                            <span class="text-error">*</span>
+                                            Kota <span class="text-error">*</span>
                                         </span>
                                     </label>
                                     <input type="text" name="shipping_city"
@@ -161,7 +135,7 @@
                                         class="input input-bordered input-lg @error('shipping_city') input-error @enderror"
                                         placeholder="Jakarta" required />
                                     @error('shipping_city')
-                                        <label class="label">
+                                        <label class="label pt-1">
                                             <span class="label-text-alt text-error">{{ $message }}</span>
                                         </label>
                                     @enderror
@@ -169,10 +143,9 @@
 
                                 <!-- Province -->
                                 <div class="form-control">
-                                    <label class="label">
+                                    <label class="label pb-2">
                                         <span class="label-text font-semibold">
-                                            Provinsi
-                                            <span class="text-error">*</span>
+                                            Provinsi <span class="text-error">*</span>
                                         </span>
                                     </label>
                                     <input type="text" name="shipping_province"
@@ -180,7 +153,7 @@
                                         class="input input-bordered input-lg @error('shipping_province') input-error @enderror"
                                         placeholder="DKI Jakarta" required />
                                     @error('shipping_province')
-                                        <label class="label">
+                                        <label class="label pt-1">
                                             <span class="label-text-alt text-error">{{ $message }}</span>
                                         </label>
                                     @enderror
@@ -188,10 +161,9 @@
 
                                 <!-- Postal Code -->
                                 <div class="form-control">
-                                    <label class="label">
+                                    <label class="label pb-2">
                                         <span class="label-text font-semibold">
-                                            Kode Pos
-                                            <span class="text-error">*</span>
+                                            Kode Pos <span class="text-error">*</span>
                                         </span>
                                     </label>
                                     <input type="text" name="shipping_postal_code"
@@ -199,25 +171,20 @@
                                         class="input input-bordered input-lg @error('shipping_postal_code') input-error @enderror"
                                         placeholder="12345" required />
                                     @error('shipping_postal_code')
-                                        <label class="label">
+                                        <label class="label pt-1">
                                             <span class="label-text-alt text-error">{{ $message }}</span>
                                         </label>
                                     @enderror
                                 </div>
 
                                 <!-- Notes -->
-                                <div class="form-control md:col-span-2">
-                                    <label class="label">
-                                        <span class="label-text font-semibold flex items-center gap-2">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
-                                                viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                                            </svg>
+                                <div class="form-control">
+                                    <label class="label pb-2">
+                                        <span class="label-text font-semibold">
                                             Catatan Pesanan (Opsional)
                                         </span>
                                     </label>
-                                    <textarea name="notes" rows="2" class="textarea textarea-bordered"
+                                    <textarea name="notes" rows="2" class="textarea textarea-bordered textarea-lg"
                                         placeholder="Contoh: Jangan bunyikan bel, kirim pagi saja, dll...">{{ old('notes') }}</textarea>
                                 </div>
                             </div>

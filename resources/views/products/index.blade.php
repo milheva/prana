@@ -263,14 +263,20 @@
                                             Habis
                                         </div>
                                     @endif
-                                    <a href="{{ route('products.show', $product->slug) }}"
-                                        class="avatar placeholder w-full">
-                                        <div
-                                            class="bg-gradient-to-br from-primary/20 to-secondary/20 text-primary w-full aspect-square rounded-2xl ring ring-primary/10 ring-offset-2 group-hover:ring-primary/30 transition-all">
-                                            <span class="text-5xl font-bold">
-                                                {{ strtoupper(substr($product->name, 0, 2)) }}
-                                            </span>
-                                        </div>
+                                    <a href="{{ route('products.show', $product->slug) }}" class="w-full">
+                                        @if ($product->image)
+                                            <img src="{{ $product->image }}" alt="{{ $product->name }}"
+                                                class="w-full aspect-square object-cover rounded-2xl ring ring-primary/10 ring-offset-2 group-hover:ring-primary/30 transition-all">
+                                        @else
+                                            <div class="avatar placeholder w-full">
+                                                <div
+                                                    class="bg-gradient-to-br from-primary/20 to-secondary/20 text-primary w-full aspect-square rounded-2xl ring ring-primary/10 ring-offset-2 group-hover:ring-primary/30 transition-all">
+                                                    <span class="text-5xl font-bold">
+                                                        {{ strtoupper(substr($product->name, 0, 2)) }}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        @endif
                                     </a>
                                 </figure>
                                 <div class="card-body">

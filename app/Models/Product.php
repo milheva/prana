@@ -17,7 +17,7 @@ class Product extends Model
         'discount_price',
         'stock',
         'unit',
-        'images',
+        'image',
         'is_active',
         'is_featured',
         'brand',
@@ -28,7 +28,6 @@ class Product extends Model
         'price' => 'decimal:2',
         'discount_price' => 'decimal:2',
         'stock' => 'integer',
-        'images' => 'array',
         'is_active' => 'boolean',
         'is_featured' => 'boolean',
     ];

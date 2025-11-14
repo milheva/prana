@@ -12,6 +12,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Str;
 
 class CategoryResource extends Resource
@@ -41,7 +42,8 @@ class CategoryResource extends Resource
                             ->required()
                             ->maxLength(255)
                             ->live(onBlur: true)
-                            ->afterStateUpdated(fn (string $operation, $state, Forms\Set $set) => 
+                            ->afterStateUpdated(
+                                fn(string $operation, $state, Forms\Set $set) =>
                                 $operation === 'create' ? $set('slug', Str::slug($state)) : null
                             ),
 
@@ -49,8 +51,8 @@ class CategoryResource extends Resource
                             ->label('Slug')
                             ->required()
                             ->maxLength(255)
-                            ->unique(Category::class, 'slug', ignoreRecord: true)
-                            ->helperText('URL-friendly version of the name'),
+                            ->unique(ignoreRecord: true)
+                            ->helperText('URL-friendly nama kategori (otomatis terisi)'),
 
                         Forms\Components\Textarea::make('description')
                             ->label('Deskripsi')
@@ -58,16 +60,17 @@ class CategoryResource extends Resource
                             ->columnSpanFull(),
 
                         Forms\Components\FileUpload::make('image')
-                            ->label('Gambar')
+                            ->label('Gambar Kategori')
                             ->image()
                             ->directory('categories')
                             ->imageEditor()
-                            ->columnSpanFull(),
+                            ->maxSize(2048)
+                            ->helperText('Maksimal 2MB. Format: JPG, PNG'),
 
                         Forms\Components\Toggle::make('is_active')
                             ->label('Aktif')
                             ->default(true)
-                            ->required(),
+                            ->helperText('Kategori aktif akan tampil di website'),
                     ])
                     ->columns(2),
             ]);
@@ -91,13 +94,16 @@ class CategoryResource extends Resource
                 Tables\Columns\TextColumn::make('slug')
                     ->label('Slug')
                     ->searchable()
-                    ->sortable()
+                    ->copyable()
+                    ->copyMessage('Slug disalin!')
+                    ->color('gray')
                     ->toggleable(isToggledHiddenByDefault: true),
 
                 Tables\Columns\TextColumn::make('products_count')
                     ->label('Jumlah Produk')
                     ->counts('products')
                     ->sortable()
+                    ->alignCenter()
                     ->badge()
                     ->color('success'),
 
@@ -108,27 +114,26 @@ class CategoryResource extends Resource
                     ->falseIcon('heroicon-o-x-circle')
                     ->trueColor('success')
                     ->falseColor('danger')
-                    ->sortable(),
+                    ->alignCenter(),
 
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Dibuat')
-                    ->dateTime('d M Y H:i')
+                    ->dateTime('d M Y, H:i')
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
 
                 Tables\Columns\TextColumn::make('updated_at')
                     ->label('Diperbarui')
-                    ->dateTime('d M Y H:i')
+                    ->dateTime('d M Y, H:i')
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 Tables\Filters\TernaryFilter::make('is_active')
                     ->label('Status')
-                    ->boolean()
+                    ->placeholder('Semua')
                     ->trueLabel('Aktif')
-                    ->falseLabel('Tidak Aktif')
-                    ->native(false),
+                    ->falseLabel('Nonaktif'),
             ])
             ->actions([
                 Tables\Actions\ViewAction::make(),
@@ -138,6 +143,18 @@ class CategoryResource extends Resource
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
+                    Tables\Actions\BulkAction::make('activate')
+                        ->label('Aktifkan')
+                        ->icon('heroicon-o-check-circle')
+                        ->color('success')
+                        ->requiresConfirmation()
+                        ->action(fn(Collection $records) => $records->each->update(['is_active' => true])),
+                    Tables\Actions\BulkAction::make('deactivate')
+                        ->label('Nonaktifkan')
+                        ->icon('heroicon-o-x-circle')
+                        ->color('danger')
+                        ->requiresConfirmation()
+                        ->action(fn(Collection $records) => $records->each->update(['is_active' => false])),
                 ]),
             ])
             ->defaultSort('created_at', 'desc');
@@ -146,7 +163,7 @@ class CategoryResource extends Resource
     public static function getRelations(): array
     {
         return [
-            RelationManagers\ProductsRelationManager::class,
+            // RelationManagers\ProductsRelationManager::class,
         ];
     }
 
