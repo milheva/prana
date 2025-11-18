@@ -43,7 +43,7 @@
                         </div>
                         <h3 class="font-bold text-lg mb-2">Telepon</h3>
                         <p class="text-base-content/70">+62 812-3456-7890</p>
-                        <a href="tel:+6281234567890" class="btn btn-primary btn-sm mt-4">Hubungi</a>
+                        <a href="tel:+6281234567890" class="btn btn-primary btn-sm mt-4 text-white">Hubungi</a>
                     </div>
                 </div>
 
@@ -61,7 +61,7 @@
                         </div>
                         <h3 class="font-bold text-lg mb-2">Email</h3>
                         <p class="text-base-content/70 text-sm">admin@griyanurul.com</p>
-                        <a href="mailto:admin@griyanurul.com" class="btn btn-secondary btn-sm mt-4">Kirim
+                        <a href="mailto:admin@griyanurul.com" class="btn btn-secondary btn-sm mt-4 text-white">Kirim
                             Email</a>
                     </div>
                 </div>
@@ -81,7 +81,7 @@
                         <h3 class="font-bold text-lg mb-2">WhatsApp</h3>
                         <p class="text-base-content/70">+62 812-3456-7890</p>
                         <a href="https://wa.me/6281234567890" target="_blank"
-                            class="btn btn-success btn-sm mt-4">Chat</a>
+                            class="btn btn-success btn-sm mt-4 text-white">Chat</a>
                     </div>
                 </div>
 
@@ -100,8 +100,8 @@
                             </svg>
                         </div>
                         <h3 class="font-bold text-lg mb-2">Lokasi</h3>
-                        <p class="text-base-content/70 text-sm">Jakarta Pusat DKI Jakarta</p>
-                        <a href="#map" class="btn btn-accent btn-sm mt-4">Lihat Peta</a>
+                        <p class="text-base-content/70 text-sm">Sidoarjo, Jawa Timur</p>
+                        <a href="#map" class="btn btn-accent btn-sm mt-4 text-white">Lihat Peta</a>
                     </div>
                 </div>
             </div>
@@ -137,7 +137,7 @@
                                     <p class="font-semibold text-lg mb-1">Alamat Kantor</p>
                                     <p class="text-base-content/70">
                                         Jl. Kesehatan No. 123<br />
-                                        Jakarta Pusat, DKI Jakarta 10110<br />
+                                        Sidoarjo, Jawa Timur 61271<br />
                                         Indonesia
                                     </p>
                                 </div>
