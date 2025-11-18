@@ -143,7 +143,7 @@
 
                             <!-- Action Buttons -->
                             <div class="space-y-2">
-                                <button type="submit" class="btn btn-primary w-full gap-2">
+                                <button type="submit" class="btn btn-primary w-full gap-2 text-white">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
                                         viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -333,7 +333,7 @@
 
                                     <div class="card-actions">
                                         <a href="{{ route('products.show', $product->slug) }}"
-                                            class="btn btn-primary btn-block gap-2 group-hover:btn-accent transition-colors">
+                                            class="btn btn-primary btn-block gap-2 group-hover:btn-accent transition-colors text-white">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
                                                 viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -372,7 +372,7 @@
                                 Maaf, produk yang Anda cari tidak tersedia.<br />
                                 Coba ubah filter atau kata kunci pencarian Anda.
                             </p>
-                            <a href="{{ route('products.index') }}" class="btn btn-primary btn-lg gap-2">
+                            <a href="{{ route('products.index') }}" class="btn btn-primary btn-lg gap-2 text-white">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
                                     viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

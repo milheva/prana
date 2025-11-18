@@ -203,7 +203,8 @@
                                     </div>
 
                                     <div class="flex flex-wrap gap-2">
-                                        <a href="{{ route('orders.show', $order) }}" class="btn btn-primary gap-2">
+                                        <a href="{{ route('orders.show', $order) }}"
+                                            class="btn btn-primary gap-2 text-white">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
                                                 viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -266,7 +267,7 @@
                         <p class="text-lg text-base-content/70 mb-8">
                             Tidak ada pesanan dengan status yang dipilih
                         </p>
-                        <a href="{{ route('orders.index') }}" class="btn btn-primary btn-lg gap-2">
+                        <a href="{{ route('orders.index') }}" class="btn btn-primary btn-lg gap-2 text-white">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -293,7 +294,7 @@
                         Anda belum melakukan pemesanan apapun.<br />
                         Yuk, mulai belanja sekarang!
                     </p>
-                    <a href="{{ route('products.index') }}" class="btn btn-primary btn-lg gap-2">
+                    <a href="{{ route('products.index') }}" class="btn btn-primary btn-lg gap-2 text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

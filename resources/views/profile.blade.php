@@ -55,9 +55,10 @@
                     <div class="divider"></div>
 
                     <div class="card-actions">
-                        <a href="{{ route('orders.index') }}" class="btn btn-primary btn-block">Lihat Pesanan Saya</a>
+                        <a href="{{ route('orders.index') }}" class="btn btn-primary btn-block text-white">Lihat Pesanan
+                            Saya</a>
                         @if (auth()->user()->isAdmin())
-                            <a href="/admin" class="btn btn-accent btn-block">Admin Panel</a>
+                            <a href="/admin" class="btn btn-accent btn-block text-white">Admin Panel</a>
                         @endif
                     </div>
                 </div>

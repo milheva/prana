@@ -340,7 +340,7 @@
                             <div class="card-actions flex-col gap-3 mt-6">
                                 @auth
                                     <a href="{{ route('checkout.index') }}"
-                                        class="btn btn-primary btn-lg w-full gap-2 shadow-lg hover:shadow-xl transition-all">
+                                        class="btn btn-primary btn-lg w-full gap-2 shadow-lg hover:shadow-xl transition-all text-white">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -350,7 +350,7 @@
                                     </a>
                                 @else
                                     <a href="{{ route('login') }}"
-                                        class="btn btn-primary btn-lg w-full gap-2 shadow-lg hover:shadow-xl transition-all">
+                                        class="btn btn-primary btn-lg w-full gap-2 shadow-lg hover:shadow-xl transition-all text-white">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -389,7 +389,7 @@
                         Sepertinya Anda belum menambahkan produk apapun.<br />
                         Yuk, mulai belanja sekarang!
                     </p>
-                    <a href="{{ route('products.index') }}" class="btn btn-primary btn-lg gap-2">
+                    <a href="{{ route('products.index') }}" class="btn btn-primary btn-lg gap-2 text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

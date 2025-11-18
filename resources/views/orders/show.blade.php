@@ -402,7 +402,8 @@
                         <!-- Action Buttons -->
                         <div class="space-y-3">
                             <!-- Invoice Button -->
-                            <a href="{{ route('invoice.show', $order) }}" class="btn btn-primary w-full gap-2">
+                            <a href="{{ route('invoice.show', $order) }}"
+                                class="btn btn-primary w-full gap-2 text-white">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
                                     viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -427,7 +428,7 @@
                             @endif
 
                             @if ($order->status === 'delivered')
-                                <button class="btn btn-accent w-full gap-2"
+                                <button class="btn btn-accent w-full gap-2 text-white"
                                     onclick="alert('Fitur ulasan akan segera hadir!')">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
                                         viewBox="0 0 24 24" stroke="currentColor">

@@ -43,7 +43,7 @@
                         </div>
                         <h3 class="font-bold text-lg mb-2">Telepon</h3>
                         <p class="text-base-content/70">+62 812-3456-7890</p>
-                        <a href="tel:+6281234567890" class="btn btn-primary btn-sm mt-4">Hubungi</a>
+                        <a href="tel:+6281234567890" class="btn btn-primary btn-sm mt-4 text-white">Hubungi</a>
                     </div>
                 </div>
 
@@ -61,7 +61,8 @@
                         </div>
                         <h3 class="font-bold text-lg mb-2">Email</h3>
                         <p class="text-base-content/70 text-sm">admin@griyanurul.com</p>
-                        <a href="mailto:admin@griyanurul.com" class="btn btn-secondary btn-sm mt-4">Kirim Email</a>
+                        <a href="mailto:admin@griyanurul.com" class="btn btn-secondary btn-sm mt-4 text-white">Kirim
+                            Email</a>
                     </div>
                 </div>
 
@@ -100,7 +101,7 @@
                         </div>
                         <h3 class="font-bold text-lg mb-2">Lokasi</h3>
                         <p class="text-base-content/70 text-sm">Jakarta Pusat DKI Jakarta</p>
-                        <a href="#map" class="btn btn-accent btn-sm mt-4">Lihat Peta</a>
+                        <a href="#map" class="btn btn-accent btn-sm mt-4 text-white">Lihat Peta</a>
                     </div>
                 </div>
             </div>
@@ -269,7 +270,7 @@
                             </div>
 
                             <!-- Submit Button -->
-                            <button type="submit" class="btn btn-primary btn-lg btn-block gap-2">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block gap-2 text-white">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
                                     viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

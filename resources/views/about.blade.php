@@ -229,7 +229,7 @@
                         terbaik!
                     </p>
                     <div class="flex flex-wrap gap-4 justify-center">
-                        <a href="{{ route('products.index') }}" class="btn btn-primary btn-lg gap-2">
+                        <a href="{{ route('products.index') }}" class="btn btn-primary btn-lg gap-2 text-white">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

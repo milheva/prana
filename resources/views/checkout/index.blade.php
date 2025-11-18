@@ -373,7 +373,8 @@
 
                             <!-- Action Buttons -->
                             <div class="space-y-3">
-                                <button type="submit" class="btn btn-primary btn-lg w-full gap-2 shadow-lg">
+                                <button type="submit"
+                                    class="btn btn-primary btn-lg w-full gap-2 shadow-lg text-white">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
                                         viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -612,7 +613,7 @@
                         </div>
 
                         <div class="card-actions mt-6">
-                            <button type="submit" class="btn btn-primary btn-block">Buat Pesanan</button>
+                            <button type="submit" class="btn btn-primary btn-block text-white">Buat Pesanan</button>
                             <a href="{{ route('cart.index') }}" class="btn btn-outline btn-block">Kembali ke
                                 Keranjang</a>
                         </div>

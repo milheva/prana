@@ -147,7 +147,8 @@
                                             d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                                     </svg>
                                     <p class="text-base-content/60 mb-4">Anda belum memiliki pesanan</p>
-                                    <a href="{{ route('products.index') }}" class="btn btn-primary">Mulai Belanja</a>
+                                    <a href="{{ route('products.index') }}" class="btn btn-primary text-white">Mulai
+                                        Belanja</a>
                                 </div>
                             @endif
                         </div>

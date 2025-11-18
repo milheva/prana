@@ -12,7 +12,7 @@
                 </a>
 
                 <div class="flex gap-2">
-                    <button onclick="window.print()" class="btn btn-primary btn-sm gap-2">
+                    <button onclick="window.print()" class="btn btn-primary btn-sm gap-2 text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -21,7 +21,8 @@
                         Cetak
                     </button>
 
-                    <a href="{{ route('invoice.download.jpg', $order) }}" class="btn btn-secondary btn-sm gap-2">
+                    <a href="{{ route('invoice.download.jpg', $order) }}"
+                        class="btn btn-secondary btn-sm gap-2 text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -32,7 +33,7 @@
 
                     <form action="{{ route('invoice.send-email', $order) }}" method="POST" class="inline">
                         @csrf
-                        <button type="submit" class="btn btn-accent btn-sm gap-2">
+                        <button type="submit" class="btn btn-accent btn-sm gap-2 text-white">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

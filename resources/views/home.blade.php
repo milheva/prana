@@ -29,7 +29,7 @@
                         kualitas hidup Anda dan keluarga.
                     </p>
                     <div class="flex gap-4 pt-4">
-                        <a href="{{ route('products.index') }}" class="btn btn-accent btn-lg gap-2">
+                        <a href="{{ route('products.index') }}" class="btn btn-accent btn-lg gap-2 text-white">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -195,7 +195,7 @@
 
                             <div class="card-actions justify-end mt-4 gap-2">
                                 <a href="{{ route('products.show', $product->slug) }}"
-                                    class="btn btn-primary btn-sm flex-1">
+                                    class="btn btn-primary btn-sm flex-1 text-white">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
                                         viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -212,7 +212,7 @@
             </div>
 
             <div class="text-center mt-12">
-                <a href="{{ route('products.index') }}" class="btn btn-primary btn-lg gap-2">
+                <a href="{{ route('products.index') }}" class="btn btn-primary btn-lg gap-2 text-white">
                     Lihat Semua Produk
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
@@ -286,7 +286,7 @@
             <p class="text-xl mb-8 text-white/90">Bergabunglah dengan ribuan pelanggan yang telah mempercayai kami</p>
             @guest
                 <div class="flex gap-4 justify-center">
-                    <a href="{{ route('register') }}" class="btn btn-accent btn-lg gap-2">
+                    <a href="{{ route('register') }}" class="btn btn-accent btn-lg gap-2 text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
