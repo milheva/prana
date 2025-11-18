@@ -1,5 +1,5 @@
 <x-public-layout>
-    <x-slot name="title">Daftar - Prana Medical</x-slot>
+    <x-slot name="title">Daftar - Griya Bidan Nurul</x-slot>
 
     <div class="min-h-screen flex items-center justify-center py-12 px-4 bg-gradient-to-br from-base-200 to-base-300">
         <div class="max-w-6xl w-full">
@@ -74,7 +74,7 @@
                         <!-- Logo/Brand -->
                         <div class="text-center mb-8">
                             <a href="{{ route('home') }}" class="inline-block">
-                                <h1 class="text-3xl font-bold text-primary mb-2">Prana Medical</h1>
+                                <h1 class="text-3xl font-bold text-primary mb-2">Griya Bidan Nurul</h1>
                                 <p class="text-base-content/70">Buat Akun Baru</p>
                             </a>
                         </div>

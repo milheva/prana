@@ -1,5 +1,5 @@
 <x-public-layout>
-    <x-slot name="title">Keranjang Belanja - Prana Medical</x-slot>
+    <x-slot name="title">Keranjang Belanja - Griya Bidan Nurul</x-slot>
 
     <!-- Header Section -->
     <div class="bg-gradient-to-r from-primary to-secondary py-12 mb-8">

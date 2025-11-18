@@ -1,5 +1,5 @@
 <x-public-layout>
-    <x-slot name="title">Lupa Password - Prana Medical</x-slot>
+    <x-slot name="title">Lupa Password - Griya Bidan Nurul</x-slot>
 
     <div class="min-h-screen flex items-center justify-center py-12 px-4 bg-gradient-to-br from-base-200 to-base-300">
         <div class="max-w-md w-full">

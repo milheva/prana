@@ -1,5 +1,5 @@
 <x-public-layout>
-    <x-slot name="title">Beranda - Toko Alat Kesehatan Terpercaya</x-slot>
+    <x-slot name="title">Beranda - Apotek & Toko Obat Terpercaya</x-slot>
 
     <!-- Hero Section -->
     <div
@@ -25,7 +25,7 @@
                         <span class="text-accent">untuk Keluarga Anda</span>
                     </h1>
                     <p class="text-xl text-white/90">
-                        Menyediakan alat kesehatan berkualitas tinggi dengan harga terjangkau untuk meningkatkan
+                        Menyediakan obat-obatan berkualitas tinggi dengan harga terjangkau untuk meningkatkan
                         kualitas hidup Anda dan keluarga.
                     </p>
                     <div class="flex gap-4 pt-4">
@@ -68,7 +68,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-48 w-48 text-white/50" fill="none"
                                     viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
-                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                        d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                                 </svg>
                             </div>
                         </div>
@@ -82,20 +82,29 @@
     <div class="container mx-auto px-4 py-20">
         <div class="text-center mb-12">
             <h2 class="text-4xl font-bold mb-4">Kategori Produk</h2>
-            <p class="text-lg text-base-content/70">Temukan alat kesehatan sesuai kebutuhan Anda</p>
+            <p class="text-lg text-base-content/70">Temukan obat sesuai kebutuhan Anda</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             @foreach ($categories as $category)
                 <a href="{{ route('products.index', ['category' => $category->slug]) }}"
-                    class="card bg-gradient-to-br from-base-100 to-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-base-300">
+                    class="card bg-gradient-to-br from-base-100 to-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-base-300 overflow-hidden">
+                    @if ($category->image)
+                        <figure class="px-6 pt-6">
+                            <img src="{{ $category->image }}" alt="{{ $category->name }}"
+                                class="w-full h-40 object-cover rounded-xl">
+                        </figure>
+                    @endif
                     <div class="card-body items-center text-center">
-                        <div class="avatar placeholder mb-4">
-                            <div
-                                class="bg-primary text-primary-content w-20 h-20 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                                <span class="text-3xl font-bold">{{ strtoupper(substr($category->name, 0, 1)) }}</span>
+                        @if (!$category->image)
+                            <div class="avatar placeholder mb-4">
+                                <div
+                                    class="bg-primary text-primary-content w-20 h-20 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                                    <span
+                                        class="text-3xl font-bold">{{ strtoupper(substr($category->name, 0, 1)) }}</span>
+                                </div>
                             </div>
-                        </div>
+                        @endif
                         <h3 class="card-title text-lg">{{ $category->name }}</h3>
                         <p class="text-sm text-base-content/70">{{ $category->products_count }} Produk</p>
                         <div class="mt-4">

@@ -242,12 +242,12 @@
     <!-- Header -->
     <div class="header">
         <div class="header-left">
-            <div class="company-name">🛡️ Prana Medical</div>
-            <div class="company-tagline">Toko Alat Kesehatan Terpercaya</div>
+            <div class="company-name">💊 Griya Bidan Nurul</div>
+            <div class="company-tagline">Apotek & Toko Obat Terpercaya</div>
             <div class="company-info">
                 Jl. Kesehatan No. 123, Jakarta<br>
                 Telp: +62 812-3456-7890<br>
-                Email: info@pranamedical.com
+                Email: admin@griyanurul.com
             </div>
         </div>
         <div class="header-right">
@@ -360,7 +360,7 @@
     <div class="footer">
         <strong>Terima kasih atas kepercayaan Anda!</strong>
         Invoice ini dibuat secara otomatis dan sah tanpa tanda tangan.<br>
-        Untuk informasi lebih lanjut, hubungi kami di info@pranamedical.com
+        Untuk informasi lebih lanjut, hubungi kami di admin@griyanurul.com
     </div>
 </body>
 

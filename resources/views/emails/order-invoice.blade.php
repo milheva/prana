@@ -13,8 +13,8 @@
     <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 30px;">
         <tr>
             <td style="text-align: center; padding: 20px; background-color: #4F46E5; color: white;">
-                <h1 style="margin: 0; font-size: 28px;">🛡️ Prana Medical</h1>
-                <p style="margin: 5px 0 0 0; font-size: 14px;">Toko Alat Kesehatan Terpercaya</p>
+                <h1 style="margin: 0; font-size: 28px;">💊 Griya Bidan Nurul</h1>
+                <p style="margin: 5px 0 0 0; font-size: 14px;">Apotek & Toko Obat Terpercaya</p>
             </td>
         </tr>
     </table>
@@ -24,7 +24,7 @@
         <tr>
             <td>
                 <h2 style="margin: 0 0 10px 0; color: #4F46E5;">Invoice Pesanan Anda</h2>
-                <p style="margin: 0;">Terima kasih telah berbelanja di Prana Medical. Berikut detail invoice pesanan
+                <p style="margin: 0;">Terima kasih telah berbelanja di Griya Bidan Nurul. Berikut detail invoice pesanan
                     Anda:</p>
             </td>
         </tr>
@@ -152,11 +152,11 @@
                 <p style="margin: 0; font-size: 13px;">
                     Invoice ini dibuat secara otomatis dan sah tanpa tanda tangan.<br>
                     Untuk bantuan, hubungi kami:<br>
-                    <strong>Email:</strong> info@pranamedical.com | <strong>Telp:</strong> +62 812-3456-7890
+                    <strong>Email:</strong> admin@griyanurul.com | <strong>Telp:</strong> +62 812-3456-7890
                 </p>
                 <p style="margin: 15px 0 0 0; font-size: 12px;">
-                    <strong>Prana Medical</strong> - Jl. Kesehatan No. 123, Jakarta<br>
-                    © {{ date('Y') }} Prana Medical. All rights reserved.
+                    <strong>Griya Bidan Nurul</strong> - Jl. Kesehatan No. 123, Jakarta<br>
+                    © {{ date('Y') }} Griya Bidan Nurul. All rights reserved.
                 </p>
             </td>
         </tr>

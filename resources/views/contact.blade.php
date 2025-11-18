@@ -1,5 +1,5 @@
 <x-public-layout>
-    <x-slot name="title">Hubungi Kami - Prana Medical</x-slot>
+    <x-slot name="title">Hubungi Kami - Griya Bidan Nurul</x-slot>
 
     <!-- Hero Section -->
     <div class="bg-gradient-to-r from-primary to-secondary text-white py-20">
@@ -60,8 +60,8 @@
                             </svg>
                         </div>
                         <h3 class="font-bold text-lg mb-2">Email</h3>
-                        <p class="text-base-content/70 text-sm">info@pranamedical.com</p>
-                        <a href="mailto:info@pranamedical.com" class="btn btn-secondary btn-sm mt-4">Kirim Email</a>
+                        <p class="text-base-content/70 text-sm">admin@griyanurul.com</p>
+                        <a href="mailto:admin@griyanurul.com" class="btn btn-secondary btn-sm mt-4">Kirim Email</a>
                     </div>
                 </div>
 

@@ -1,5 +1,5 @@
 <x-public-layout>
-    <x-slot name="title">Detail Pesanan #{{ $order->order_number }} - Prana Medical</x-slot>
+    <x-slot name="title">Detail Pesanan #{{ $order->order_number }} - Griya Bidan Nurul</x-slot>
 
     <!-- Breadcrumb Section -->
     <div class="bg-base-200 py-4">

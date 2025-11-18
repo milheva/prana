@@ -12,7 +12,7 @@
             <div class="card bg-gradient-to-r from-primary to-secondary text-primary-content">
                 <div class="card-body">
                     <h2 class="card-title text-2xl">Selamat Datang, {{ $user->name }}! 👋</h2>
-                    <p>Terima kasih telah menjadi pelanggan setia Prana Medical. Kelola pesanan dan belanja Anda di
+                    <p>Terima kasih telah menjadi pelanggan setia Griya Bidan Nurul. Kelola pesanan dan belanja Anda di
                         sini.</p>
                 </div>
             </div>

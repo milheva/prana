@@ -1,5 +1,5 @@
 <x-public-layout>
-    <x-slot name="title">{{ $product->name }} - Prana Medical</x-slot>
+    <x-slot name="title">{{ $product->name }} - Griya Bidan Nurul</x-slot>
 
     <!-- Breadcrumb Section -->
     <div class="bg-base-200 py-4">

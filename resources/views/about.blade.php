@@ -1,11 +1,11 @@
 <x-public-layout>
-    <x-slot name="title">Tentang Kami - Prana Medical</x-slot>
+    <x-slot name="title">Tentang Kami - Griya Bidan Nurul</x-slot>
 
     <!-- Hero Section -->
     <div class="bg-gradient-to-r from-primary to-secondary text-white py-20">
         <div class="container mx-auto px-4">
             <div class="max-w-4xl mx-auto text-center">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6">Tentang Prana Medical</h1>
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">Tentang Griya Bidan Nurul</h1>
                 <p class="text-xl md:text-2xl text-white/90 leading-relaxed">
                     Mitra Terpercaya untuk Kesehatan Anda
                 </p>
@@ -32,7 +32,8 @@
                 <div class="card-body p-8 md:p-12">
                     <div class="prose max-w-none">
                         <p class="text-xl text-base-content/80 leading-relaxed">
-                            <strong class="text-primary">Prana Medical</strong> adalah toko alat kesehatan terpercaya
+                            <strong class="text-primary">Griya Bidan Nurul</strong> adalah apotek dan toko obat
+                            terpercaya
                             yang telah melayani ribuan pelanggan di seluruh Indonesia. Kami berkomitmen untuk
                             menyediakan berbagai produk kesehatan berkualitas tinggi dengan harga terjangkau,
                             memastikan setiap keluarga dapat mengakses peralatan medis yang mereka butuhkan.
@@ -59,7 +60,7 @@
                             <h2 class="text-3xl font-bold text-primary">Visi Kami</h2>
                         </div>
                         <p class="text-lg text-base-content/80 leading-relaxed">
-                            Menjadi penyedia alat kesehatan terkemuka yang memberikan solusi kesehatan terbaik untuk
+                            Menjadi penyedia obat-obatan terkemuka yang memberikan solusi kesehatan terbaik untuk
                             meningkatkan kualitas hidup masyarakat Indonesia.
                         </p>
                     </div>
@@ -86,7 +87,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
-                                <span>Menyediakan produk alat kesehatan berkualitas tinggi</span>
+                                <span>Menyediakan produk obat-obatan berkualitas tinggi</span>
                             </li>
                             <li class="flex gap-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-secondary flex-shrink-0"

@@ -1,5 +1,5 @@
 <x-public-layout>
-    <x-slot name="title">Pesanan Saya - Prana Medical</x-slot>
+    <x-slot name="title">Pesanan Saya - Griya Bidan Nurul</x-slot>
 
     <!-- Header Section -->
     <div class="bg-gradient-to-r from-primary to-secondary py-12 mb-8">
