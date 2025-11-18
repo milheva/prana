@@ -102,7 +102,7 @@
                                         </span>
                                     </label>
                                     <input type="email" name="email" value="{{ auth()->user()->email }}"
-                                        class="input input-bordered input-lg" placeholder="email@example.com"
+                                        class="input input-bordered input-lg" placeholder="wayanindra@gmail.com"
                                         readonly />
                                 </div>
 

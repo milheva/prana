@@ -118,7 +118,7 @@
                                     </span>
                                 </label>
                                 <input type="email" id="email" name="email" value="{{ old('email') }}"
-                                    placeholder="email@example.com"
+                                    placeholder="wayanindra@gmail.com"
                                     class="input input-bordered input-lg @error('email') input-error @enderror"
                                     required autocomplete="username" />
                                 @error('email')

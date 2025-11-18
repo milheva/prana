@@ -232,7 +232,7 @@
                                 <label class="label">
                                     <span class="label-text font-semibold">Email</span>
                                 </label>
-                                <input type="email" placeholder="email@example.com"
+                                <input type="email" placeholder="wayanindra@gmail.com"
                                     class="input input-bordered input-lg" required />
                             </div>
 
