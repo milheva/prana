@@ -332,19 +332,23 @@
             </aside>
             <nav>
                 <h6 class="footer-title">Layanan</h6>
-                <a href="{{ route('products.index') }}" class="link link-hover">Produk</a>
-                <a href="{{ route('about') }}" class="link link-hover">Tentang Kami</a>
-                <a href="{{ route('contact') }}" class="link link-hover">Kontak</a>
-                @auth
-                    <a href="{{ route('orders.index') }}" class="link link-hover">Pesanan Saya</a>
-                @endauth
+                <div class="flex flex-wrap gap-x-4 gap-y-2">
+                    <a href="{{ route('products.index') }}" class="link link-hover">Produk</a>
+                    <a href="{{ route('about') }}" class="link link-hover">Tentang Kami</a>
+                    <a href="{{ route('contact') }}" class="link link-hover">Kontak</a>
+                    @auth
+                        <a href="{{ route('orders.index') }}" class="link link-hover">Pesanan Saya</a>
+                    @endauth
+                </div>
             </nav>
             <nav>
                 <h6 class="footer-title">Perusahaan</h6>
-                <a class="link link-hover">Kebijakan Privasi</a>
-                <a class="link link-hover">Syarat & Ketentuan</a>
-                <a class="link link-hover">FAQ</a>
-                <a class="link link-hover">Cara Belanja</a>
+                <div class="flex flex-wrap gap-x-4 gap-y-2">
+                    <a class="link link-hover">Kebijakan Privasi</a>
+                    <a class="link link-hover">Syarat & Ketentuan</a>
+                    <a class="link link-hover">FAQ</a>
+                    <a class="link link-hover">Cara Belanja</a>
+                </div>
             </nav>
             <nav>
                 <h6 class="footer-title">Hubungi Kami</h6>

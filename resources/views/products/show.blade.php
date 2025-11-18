@@ -240,8 +240,7 @@
                                     </div>
 
                                     <div class="flex flex-col sm:flex-row gap-3">
-                                        <button type="submit"
-                                            class="btn btn-primary btn-lg flex-1 gap-2 shadow-lg text-white">
+                                        <button type="submit" class="btn btn-primary btn-lg flex-1 gap-2 shadow-lg">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
                                                 viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -251,7 +250,7 @@
                                         </button>
                                         <button type="button"
                                             onclick="alert('Fitur Beli Langsung akan segera hadir!')"
-                                            class="btn btn-accent btn-lg gap-2 shadow-lg text-white">
+                                            class="btn btn-accent btn-lg gap-2 shadow-lg">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
                                                 viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -444,7 +443,7 @@
                                 </div>
                                 <div class="card-actions mt-3">
                                     <a href="{{ route('products.show', $relatedProduct->slug) }}"
-                                        class="btn btn-primary btn-sm btn-block gap-2 text-white">
+                                        class="btn btn-primary btn-sm btn-block gap-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
