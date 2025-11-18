@@ -303,7 +303,7 @@
                                         d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                 </svg>
                                 <p class="text-base-content/50 font-semibold">Peta Lokasi</p>
-                                <p class="text-base-content/40 text-sm">Jl. Kesehatan No. 123, Jakarta Pusat</p>
+                                <p class="text-base-content/40 text-sm">Jl. Kesehatan No. 123, Sidoarjo</p>
                             </div>
                         </div>
                         <!-- Uncomment and add your Google Maps API key
